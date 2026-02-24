@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🔐 Login Feature – Testing Documentation
 
-## Getting Started
+This project demonstrates structured testing of a Login Feature built with:
 
-First, run the development server:
+- React
+- TypeScript
+- Jest
+- React Testing Library
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Testing Strategy
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The login feature is tested across three layers:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Unit Testing (Utility functions)
+2. Component Testing (UI behavior)
+3. Service Testing (API layer)
 
-## Learn More
+This layered testing approach ensures:
 
-To learn more about Next.js, take a look at the following resources:
+- Logic correctness
+- UI reliability
+- API safety
+- Error handling validation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+#  Documentation Structure
 
-## Deploy on Vercel
+Detailed documentation can be found inside:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+docs/testing/
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- testing-overview.md
+- unit-testing.md
+- component-testing.md
+- service-testing.md
+
+Architecture explanation:
+
+docs/architecture/testing-architecture.md
+
+---
+
+# 🎯 What Is Covered
+
+✔️ Rendering validation  
+✔️ Conditional UI behavior  
+✔️ User interactions  
+✔️ API success & failure handling  
+✔️ Error cases  
+✔️ Edge case testing  
+✔️ Mocking external dependencies  
+
+---
+
+# 🚀 How To Run Tests
+
+npm test
+
+To generate coverage report:
+
+npm run test -- --coverage
+
+---
+
+# 🏗 Testing Philosophy
+
+- Test behavior, not implementation
+- Keep tests isolated
+- Mock external dependencies
+- Validate edge cases
+- Ensure accessibility-first queries
+
+---
+
+# 👨‍💻 Author
+
+Structured and implemented with a clean architecture mindset.

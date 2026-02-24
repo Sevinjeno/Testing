@@ -3,7 +3,6 @@ import { add, subtract, divide } from "./math"
 
 describe("Math Utility Function", () => {
 
-
     describe("add function", () => {
 
         it("Add two positive numbers", () => {
@@ -13,7 +12,6 @@ describe("Math Utility Function", () => {
         it("Add two negative numbers", () => {
             expect(add(-5, -5)).toBe(-10)
         })
-
 
     })
 
