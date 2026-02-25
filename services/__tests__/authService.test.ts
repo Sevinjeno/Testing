@@ -15,7 +15,7 @@ describe("authService - LoginUser",()=>{
              json:()=>Promise.resolve({token:"fake-token"}),        
         }as Response))
     
-        
+
         const result=await LoginUser({
             email:"test@test.com",
             password:"123456",
@@ -42,10 +42,5 @@ describe("authService - LoginUser",()=>{
       })
     ).rejects.toThrow("Login failed")
   })
-
-
-
-
-
 
 })

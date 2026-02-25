@@ -2,9 +2,14 @@ import { Props } from "@/types/components/loginTypes";
 import React, { useState } from "react";
 
 const LoginForm = ({ onSubmit, loading, error }: Props) => {
+
+  console.log("Login Form Component : Child");
+
+  
   const [user, setUser] = useState({ email: "", password: "" });
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    console.log("On sumbit function ");
     e.preventDefault();
     onSubmit(user?.email, user?.password);
   };

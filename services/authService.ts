@@ -4,7 +4,6 @@ export const LoginUser=async (payload:LoginPayload)=>{
 
 
     const response = await fetch("api/login",{
-
            method:"POST",
            headers:{
             "Content-Type":"application/json"
@@ -12,6 +11,7 @@ export const LoginUser=async (payload:LoginPayload)=>{
         body :JSON.stringify(payload),
 
     })
+
 
     if(!response.ok){
         throw new Error ("Login failed")   
