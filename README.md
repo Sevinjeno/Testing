@@ -1,80 +1,78 @@
-# 🔐 Login Feature – Testing Documentation
+🔐 Authentication Feature – Testing Documentation
 
-This project demonstrates structured testing of a Login Feature built with:
+This project demonstrates structured testing of a Login Authentication feature built with:
 
-- React
-- TypeScript
-- Jest
-- React Testing Library
+React / Next.js
 
----
+TypeScript
 
-# Testing Strategy
+Jest
 
-The login feature is tested across three layers:
+React Testing Library
 
-1. Unit Testing (Utility functions)
-2. Component Testing (UI behavior)
-3. Service Testing (API layer)
+Playwright (E2E)
 
-This layered testing approach ensures:
+🧪 Testing Strategy
 
-- Logic correctness
-- UI reliability
-- API safety
-- Error handling validation
+The authentication flow is tested across four layers:
 
----
+Unit Testing (Component logic)
 
-#  Documentation Structure
+Component Testing (UI behavior)
 
-Detailed documentation can be found inside:
+Integration Testing (State + API interaction)
 
-docs/testing/
+End-to-End Testing (Real browser flow)
 
-- testing-overview.md
-- unit-testing.md
-- component-testing.md
-- service-testing.md
+This layered approach ensures:
 
-Architecture explanation:
+Logic correctness
 
-docs/architecture/testing-architecture.md
+UI reliability
 
----
+API safety
 
-# 🎯 What Is Covered
+Error handling validation
 
-✔️ Rendering validation  
-✔️ Conditional UI behavior  
-✔️ User interactions  
-✔️ API success & failure handling  
-✔️ Error cases  
-✔️ Edge case testing  
-✔️ Mocking external dependencies  
+Full user journey verification
 
----
+🎯 What Is Covered
 
-# 🚀 How To Run Tests
+✔️ Rendering validation
+✔️ Form interactions
+✔️ Loading & error states
+✔️ API success & failure handling
+✔️ Mocking external dependencies
+✔️ Protected rendering logic
+✔️ Browser-level validation via Playwright
+✔️ Coverage threshold enforcement (≥70%)
+
+🚀 How To Run Tests
+
+Run unit & integration tests:
 
 npm test
 
-To generate coverage report:
+Generate coverage:
 
-npm run test -- --coverage
+npm test -- --coverage
 
----
+Run E2E tests:
 
-# 🏗 Testing Philosophy
+npx playwright install
+npm run test:e2e
+🏗 Testing Philosophy
 
-- Test behavior, not implementation
-- Keep tests isolated
-- Mock external dependencies
-- Validate edge cases
-- Ensure accessibility-first queries
+Test behavior, not implementation
 
----
+Keep tests isolated
 
-# 👨‍💻 Author
+Mock external dependencies
 
-Structured and implemented with a clean architecture mindset.
+Validate edge cases
+
+Follow Testing Pyramid principles
+
+👨‍💻 Author
+
+Built with a production-ready mindset focusing on clean architecture, scalability, and comprehensive testing.

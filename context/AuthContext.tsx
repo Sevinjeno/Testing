@@ -1,6 +1,6 @@
-"use client ";
+"use client";
 
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 
 interface AuthContextType {
@@ -13,9 +13,12 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
-  const [token, setToken] = useState<string | null>(() => {
+const [token, setToken] = useState<string | null>(() => {
+  if (typeof window !== "undefined") {
     return localStorage.getItem("token");
-  });
+  }
+  return null;
+});
 
 
   const login =(NewToken:string)=>{
