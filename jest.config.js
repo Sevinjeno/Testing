@@ -5,15 +5,25 @@ const createJestConfig = nextJest({
 })
 
 const customJestConfig = {
+
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+
   testEnvironment: 'jest-environment-jsdom',
 
-  // ✅ ADD THIS PART
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
   },
 
+  testPathIgnorePatterns: [
+    "<rootDir>/tests/"
+  ],
+
   collectCoverage: true,
+
+  coverageDirectory: "coverage",
+
+  coverageReporters: ["text", "lcov", "html"],
+
   coverageThreshold: {
     global: {
       branches: 70,

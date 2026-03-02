@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event"
 import { LoginUser } from "@/services/authService"
 import LoginPage from "@/app/login/page"
 
-jest.mock("../../../services/authService.ts", () => ({
+jest.mock("@/services/authService", () => ({
   LoginUser: jest.fn(),
 }))
 
